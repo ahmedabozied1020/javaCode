@@ -14,7 +14,12 @@
   display: flex;
   justify-content: center;
 } */
-* {
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                         DOM CHallenge
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* * {
   margin: 0%;
   background-color: #dad8d7;
   font-weight: bold;
@@ -85,4 +90,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */

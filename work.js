@@ -1158,10 +1158,87 @@
 //  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 //                          Task
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-let myElement = document.createElement("title");
-let myTextEle = document.createTextNode("Elzero");
+// =======> header element
+let header = document.createElement("header");
+let divTitle = document.createElement("div");
+let titleTxt = document.createTextNode("Elzero");
+let nav = document.createElement("nav");
+let menu = document.createElement("ul");
+let menuElement1 = document.createElement("li");
+let menuElement2 = document.createElement("li");
+let menuElement3 = document.createElement("li");
+let menuElement4 = document.createElement("li");
+let menuElement1Txt = document.createTextNode("Home");
+let menuElement2Txt = document.createTextNode("About");
+let menuElement3Txt = document.createTextNode("Service");
+let menuElement4Txt = document.createTextNode("Contact");
 
-myElement.appendChild(myTextEle);
+header.appendChild(divTitle);
+divTitle.appendChild(titleTxt);
+header.appendChild(nav);
+menu.appendChild(menuElement1);
+menu.appendChild(menuElement2);
+menu.appendChild(menuElement3);
+menu.appendChild(menuElement4);
+nav.appendChild(menu);
+menuElement1.appendChild(menuElement1Txt);
+menuElement2.appendChild(menuElement2Txt);
+menuElement3.appendChild(menuElement3Txt);
+menuElement4.appendChild(menuElement4Txt);
 
-document.body.appendChild(myElement);
-console.log(myElement);
+// =======> classes of header
+divTitle.className = "title";
+header.className = "header";
+nav.className = "menu";
+
+console.log(header);
+// =======> css header
+document.body.style.cssText =
+  "font-family : arial ; margin: 0%; background-color: #dad8d7;";
+header.style.cssText =
+  " display: flex; align-content: center;align-items: center;  padding-left: 40px;height: 50px;justify-content: space-between;background-color: #ffffff";
+divTitle.style.cssText = "background-color: #ffffff;color: #1e9b28c0; ";
+menu.style.cssText =
+  " background-color: #ffffff;display: flex; align-content: center;height: auto;width: 30%;cursor:pointer";
+menuElement1.style.cssText =
+  " list-style: none;background-color: #ffffff;padding: 10px;font-size: 15px;font-weight: normal;cursor:pointer";
+menuElement2.style.cssText =
+  " list-style: none;background-color: #ffffff;padding: 10px;font-size: 15px;font-weight: normal;cursor:pointer";
+menuElement3.style.cssText =
+  " list-style: none;background-color: #ffffff;padding: 10px;font-size: 15px;font-weight: normal;cursor:pointer";
+menuElement4.style.cssText =
+  " list-style: none;background-color: #ffffff;padding: 10px;font-size: 15px;font-weight: normal;cursor:pointer";
+document.body.appendChild(header);
+
+// =======> numbers element
+let divNumbers = document.createElement("div");
+divNumbers.className = "numbers";
+for (let i = 1; i <= 15; i++) {
+  let product = document.createElement("div");
+  product.className = "content";
+  product.textContent = i;
+  let productName = document.createElement("span");
+  productName.textContent = "\n Product";
+  product.appendChild(productName);
+  divNumbers.appendChild(product);
+  // =======> css content of numbers element
+  product.style.cssText =
+    "height: 74px;width: 250px;border: #ffffff solid;background-color: #ffffff;margin-bottom: 10px;display: flex;align-items: center;justify-content: center; flex-direction: column;";
+}
+// =======> css of numbers element
+divNumbers.style.cssText =
+  " display: flex;flex-wrap: wrap;align-items: center;justify-content: space-evenly;margin-top: 10px;";
+console.log(divNumbers);
+document.body.appendChild(divNumbers);
+
+// =======> footer elemenet
+let footerEle = document.createElement("footer");
+footerEle.className = "footer";
+footerEle.textContent = " CopyRight 2021 ";
+console.log(footerEle);
+
+// =======> css footer
+footerEle.style.cssText =
+  " background-color: #1e9b28c0;color: #ffffff;height: 47px;display: flex;align-items: center;justify-content: center;";
+
+document.body.appendChild(footerEle);
